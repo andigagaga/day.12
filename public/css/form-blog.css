@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&family=Ysabeau:ital,wght@1,1&display=swap');
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+
+
+.fw-bold:hover {
+  background-color: grey !important;
+}
+
+
+.bg-black:hover {
+    background-color: gold !important;
+}
+.container-form {
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+  }
+  .container-form h2 {
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+  }

@@ -1,49 +1,26 @@
 
-function submitData() {
-    let name = document.getElementById("input-name").value;
-    let email = document.getElementById("input-email").value;
-    let phone = document.getElementById("input-phone").value;
-    let status = document.getElementById("input-status").value;
-    let message = document.getElementById("input-message").value;
-
+function sendMail() {
+    let name = document.getElementById("inputName").value;
+    let phone = document.getElementById("inputPhone").value;
+    let subject = document.getElementById("inputSubject").value;
+    let message = document.getElementById("inputMessage").value;
+    let email = document.getElementById("inputEmail")
+  
     if (name == "") {
-        return alert("nama nya isi dulu syg");
-
-    } else if(email == "") {
-        return alert("email jg diisi donk")
-    } else if(phone == "") {
-        return alert("no hp nya juga lah");
-    } else if(status == "") {
-        return alert("status jg jangan malu")
-    } else if(message == "") {
-        return alert("isi dulu...")
+      return alert("Nama must be filled");
+    } else if (email == "") {
+      return alert("Email must be filled");
+    } else if (phone == "") {
+      return alert("Phone must be filled!");
+    } else if (subject == "") {
+      return alert("Subject must be choosen!");
+    } else if (message == "") {
+      return alert("Message must be filled!")
     }
-
-    let emailReceiver = "andigagaga1@gmail.com"
-
+  
+    let emailReceiver = "andigagaga1@gmail.com";
+  
     let a = document.createElement("a");
-    a.href = `mailto:${emailReceiver}?status=${status}&body=Halo, nama saya ${name}, ${message}. Silakan kontak saya di nomor ${phone}, terima kasih.`;
+    a.href = `mailto:${emailReceiver}?subject=${subject}&body=Halo, nama saya, ${name} ${message}. Silahkan kirimkan pesan saya di nomor ${phone}`;
     a.click();
-  
-
-
-
-  
-
-    console.log(name);
-    console.log(email);
-    console.log(phone);
-    console.log(status);
-    console.log(message);
-
-    let emailer = {
-        name,
-        email,
-        phone,
-        status,
-        message,
-      };
-    
-      console.log(emailer);
-}
-  
+  }
